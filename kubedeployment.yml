@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 221058005_kavya
+  labels:
+    app: 221058005_kavya
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 221058005_kavya
+  template:
+    metadata:
+      labels:
+        app: 221058005_kavya
+    spec:
+      containers:
+      - name: 221058005_kavya
+        image: kavyamanipal/newdocker:latest
+        ports:
+        - containerPort: 80
